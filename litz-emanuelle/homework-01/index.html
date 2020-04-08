@@ -1,0 +1,117 @@
+<!--
+    Great job!
+    Smart way to use the ":before" pseudo selector. Will learn about them in a couple of weeks, but it seems you are getting familiar with them already.
+-->
+<html>
+
+<head>
+    <title></title>
+    <style>
+        .enMoney::before {
+            content: "$";
+        }
+
+        .negMoney {
+            color: red;
+        }
+
+        #moneySum ::before {
+            content: "$";
+        }
+
+        #moneySum {
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background: rgb(82, 102, 145)
+        }
+
+        tr:nth-child(odd) {
+            background: rgb(229, 245, 10)
+        }
+    </style>
+</head>
+
+<body>
+    <table width="20%" border="1">
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Balance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>January</td>
+                <td class="enMoney">100</td>
+            </tr>
+            <tr>
+                <td>February</td>
+                <td class="enMoney">80</td>
+            </tr>
+            <tr>
+                <td>March</td>
+                <td class="enMoney">-70</td>
+            </tr>
+            <tr>
+                <td>April</td>
+                <td class="enMoney">80</td>
+            </tr>
+            <tr>
+                <td>May</td>
+                <td class="enMoney">120</td>
+            </tr>
+            <tr>
+                <td>June</td>
+                <td class="enMoney">150</td>
+            </tr>
+            <tr>
+                <td>July</td>
+                <td class="enMoney">110</td>
+            </tr>
+            <tr>
+                <td>August</td>
+                <td class="enMoney">60</td>
+            </tr>
+            <tr>
+                <td>September</td>
+                <td class="enMoney">50</td>
+            </tr>
+            <tr>
+                <td>Octomber</td>
+                <td class="enMoney">170</td>
+            </tr>
+            <tr>
+                <td>November</td>
+                <td class="enMoney">180</td>
+            </tr>
+            <tr>
+                <td>December</td>
+                <td class="enMoney">190</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td> <b>SUM</b> </td>
+                <td id="moneySum"> <b>0</b> </td>
+            </tr>
+        </tfoot>
+
+        </tbody>
+    </table>
+    <script>
+        var elements = document.getElementsByClassName('enMoney');
+        var sum = 0;
+        for (var i = 0; i < elements.length; i++) {
+            var cell = parseInt(elements[i].innerHTML);
+            if (cell < 0) {
+                elements[i].classList.add('negMoney');
+            }
+            sum += cell;
+        }
+        document.getElementById('moneySum').innerHTML = sum;
+    </script>
+</body>
+
+</html>
