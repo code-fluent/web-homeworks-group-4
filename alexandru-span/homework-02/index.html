@@ -1,0 +1,100 @@
+<!--
+  Great work. Nice that you've put some JS also.
+  See my comments on the radio buttons.
+-->
+<html>
+  <head>
+    <title>Buy a cinema ticket!</title>
+    <style>
+      label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+        font-size: 15px;
+      }
+
+      input {
+        font-size: 15px;
+      }
+
+      legend {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to Cinema-City!</h1>
+    <h3>In order to buy your tickets please complete the formular below:</h3>
+    <form>
+      <fieldset>
+        <legend>Contact Details</legend>
+        <label>
+          <input
+            type="text"
+            name="FirstName"
+            id="Firstname"
+            placeholder="First Name"
+          />
+          <input
+            type="text"
+            name="LastName"
+            id="Lastname"
+            placeholder="Last Name"
+          />
+          <br />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="E-mail adress"
+          />
+          <br />
+          <input type="phone" name="phone" id="phone" placeholder="Phone Number"
+        </label>
+      </fieldset>
+      <fieldset>
+        <!-- 
+          For the browsor to consider all the radio inputs as part of the same group
+          they must have the same name, name="movie". Only their values will be different.
+        -->
+        <legend>Choose a Movie</legend>
+        <label>
+          <input type="radio" name="Godzilla" value="Godzilla" /> Godzilla
+        </label>
+        <label>
+          <input type="radio" name="Aladin" value="Aladin" />Aladin
+        </label>
+        <label>
+          <input type="radio" name="Avengers" value="Avengers" />Avengers
+        </label>
+        <label>
+          <input type="radio" name="Rocketman" value="Rocketman" />Rocketman
+        </label>
+        <label>
+          <input type="radio" name="Spider-man" value="Spider-man" />Spider-man
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Choose a Location</legend>
+        <select>
+          <option value="">Choose your Location</option>
+          <option value="Cinema City - Iulius">Cinema City - Iulius</option>
+          <option value="Cinema City - VIVO">Cinema City - VIVO</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Terms and conditions</legend>
+        <label>
+          <input type="checkbox" name="acceptTerms" value="acceptTerms" />Accept
+          Terms and conditions
+        </label>
+      </fieldset>
+    </form>
+    <button type="submit" name="button" id="button">Buy tickets</button>
+    <script>
+      document.getElementById("button").addEventListener("click", function () {
+        alert("Thank you for buying the ticket/s !");
+      });
+    </script>
+  </body>
+</html>

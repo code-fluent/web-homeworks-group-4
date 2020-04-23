@@ -1,0 +1,104 @@
+<!--
+  Great job.
+  See one minor comment below.
+-->
+
+<html>
+  <head>
+    <title>Homework 2</title>
+    <style>
+      label {
+        display: block;
+        margin-top: 9px;
+        font-weight: bold;
+      }
+      input {
+        font-size: 19px;
+      }
+      fieldset {
+        border: none;
+      }
+      button {
+        font-size: 18px;
+      }
+    </style>
+
+    <body>
+      <fieldset>
+        <legend>Contact details</legend>
+        <form>
+          <label for="firstName">First name</label>
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            placeholder="First name"
+          />
+
+          <label for="lastName">Last name</label>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            placeholder="Last name"
+          />
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Email" />
+
+          <label for="phone">Phone Number</label>
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            placeholder="Phone Number"
+          />
+        </form>
+      </fieldset>
+
+      <fieldset>
+        <legend>Choose a movie</legend>
+
+        <label>
+          <input type="radio" name="movie" value="godzilla" /> Godzilla
+        </label>
+
+        <label>
+          <input type="radio" name="movie" value="alladin" /> Alladin
+        </label>
+
+        <label>
+          <input type="radio" name="movie" value="avengers" /> Avengers
+        </label>
+        <label>
+          <input type="radio" name="movie" value="rocketman" /> Rocketman
+        </label>
+        <label>
+          <input type="radio" name="movie" value="spider-man" /> Spider-Man
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Choose location</legend>
+        <label for="location">Location</label>
+
+        <!--Missing id and name on select -->
+        <select>
+          <option value="">Choose your location</option>
+          <option value="im">Cinema City Iulius</option>
+          <option value="pm">Cinema City Polus</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Terms and conditions</legend>
+        <label>
+          <input
+            type="checkbox"
+            name="accept"
+            value="Accept terms and conditions"
+          />
+          Accept terms and conditions
+        </label>
+      </fieldset>
+      <button type="submit">Buy tickets</button>
+    </body>
+  </head>
+</html>

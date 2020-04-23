@@ -1,0 +1,92 @@
+<!--
+    Good work. 
+    Please see my comments.
+-->
+<html>
+  <head>
+    <title>Tema 2 - Cinema ticket form</title>
+    
+  </head>
+
+<style>
+   body {background-color:bisque;}
+   
+   
+   fieldset {margin-top: 15px;}
+   
+   button {margin-top: 15px;
+   font-size: large;}
+
+   center {
+       font-size: xx-large;
+   }
+   
+</style>
+
+<body>
+  <form>
+   
+<fieldset>
+    <legend>"Contact details"</legend>
+    <!-- 
+        Don't forget to add the for="" property on labels, otherwise the browser will not know
+        that a label and an input should be connected.
+    -->
+    <label>
+        <input type="text" name="firstName" id="firstName" placeholder="First Name"> First Name
+    </label>
+    <label>
+        <input type="text" name="lastName" id="lastName" placeholder="Last Name"> Last Name
+    </label>
+    <label>
+        <input type="email" name="email" id="email" placeholder="Email"> Email
+    </label>
+    <label>
+        <input type="number" name="phone" id="phone" placeholder="Phone Number"> Phone Number
+    </label>
+</fieldset>
+
+
+<fieldset>
+    <legend>"Choose a movie"</legend>
+    <label>
+        <input type="radio" value="Godzilla" name="movie" /> Godzilla </label>
+        <input type="radio" value="Aladin" name="movie" /> Aladin </label>
+        <input type="radio" value="Avengers" name="movie" /> Avengers </label>
+        <input type="radio" value="Rocketman" name="movie" /> Rocketman </label>
+        <input type="radio" value="Spider-man" name="movie" /> Spider-man </label>
+</fieldset>
+
+
+<fieldset>
+    <legend>"Choose location"</legend>
+    <label for="cinema">Location</label>
+    <!-- Missing name and id on the select -->
+    <select>
+        <option value="">Options</option>
+        <option value="Iulius">Cinema City - Iulius</option>
+        <option value="Vivo">Cinema City - Vivo</option>
+    </select>
+</fieldset>
+
+
+<fieldset>
+    <legend>"Terms and conditions"</legend>
+    <label>
+        <input type="checkbox" name="acceptTerms" /> I agree the Terms & Conditions
+    </label>
+</fieldset>
+
+<button type="submit" >Buy tickets</button>
+
+  </form>
+  
+</body>
+
+<!--
+    No elements should be outside of <body></body>. This needs to be moved to the body.
+-->
+<center>
+    <img src=logo.svg height="50%" />
+</center>
+</html>

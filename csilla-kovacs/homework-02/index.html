@@ -1,0 +1,101 @@
+<!--
+    Good job.
+    Please see my comments.
+-->
+
+<html>
+
+<head>
+    <title>Cinema Ticket</title>
+</head>
+<style>
+    label {
+        display: block;
+        font-weight: bold;
+        margin-top: 15px;
+        color: rgb(94, 94, 196);
+    }
+
+    input {
+        font-size: 18px;
+    }
+
+    select {
+        margin-top: 15px;
+        font-size: 18px;
+    }
+
+    textarea {
+        width: 50%;
+        font-size: 18px;
+    }
+
+    fieldset {
+        border: none;
+        margin-top: 15px;
+        background-color: #f6f6f6;
+    }
+
+    input {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 30px;
+        background-color: rgb(94, 94, 196);
+        color: rgb(160, 219, 229);
+    }
+</style>
+
+<body>
+    <form>
+        <!--
+            While your code is 100% correct, for the names and ids it is a better 
+            practice to name them in camelCase. That means that instead of
+            Firstname you will have firstName, Lastname will be lastName.
+
+            More about camelCase here: https://en.wikipedia.org/wiki/Camel_case
+        -->
+        <label for="Firstname">First name</label>
+        <input type="text" name="FirstName" id="Firstname" placeholder="First name" />
+        <label for="Lastname">Last Name</label>
+        <input type="text" name="LastName" id="Lastname" placeholder="Last name" />
+        <label for="Email">Email</label>
+        <input type="Email" name="Email" id="Email" placeholder="Email" />
+        <label for="Phone">Phone</label>
+        <input type="Phone" name="Phone" id="Phone" placeholder="Phone" />
+
+        <!-- Wrong value: for="country". It should be for="movie" -->
+        <label for="country">Movies</label>
+
+        <!-- Missing name and id on the select -->
+        <select>
+            <option value="">Choose a movie</option>
+            <option value="gz">Godzilla</option>
+            <option value="al">Aladdin</option>
+            <option value="av">Avengers</option>
+            <option value="rm">Rocketman</option>
+            <option value="sm">Spider-man</option>
+        </select>
+        <fieldset>
+            <legend>Select Location</legend>
+            <label>
+                <input type="radio" name="Location" value="Cinema City - Iulius Mall" /> Cinema City - Iulius Mall</label>
+            <label>
+                <input type="radio" name="Location" value="Cinema City - Vivo" /> Cinema City - Vivo</label>
+        </fieldset>
+        <fieldset>
+            <legend>Terms and Conditions</legend>
+            <label>
+                <input type="checkbox" name="acceptTerms" value="terms" /> Accept Terms and Conditions
+            </label>
+        </fieldset>
+</body>
+<button id="button">Submit</button>
+</body>
+<script>
+    document.getElementById("button").addEventListener("click", function () { alert("Buy tickets"); });
+</script>
+</body>
+
+</html>

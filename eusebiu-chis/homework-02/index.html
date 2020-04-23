@@ -1,0 +1,127 @@
+<!--
+  Looking good.
+  Please see my comments on what can be improved.
+-->
+
+<!-- Typo, it should be <html> -->
+<htmk>
+  <head>
+    <title>Buying a cinema ticket</title>
+    <style>
+
+  fieldset {
+
+      border:none;
+      margin-top: 10px;
+      background-color: rgb(214, 212, 212);
+      
+  }
+
+   label {
+       display: block;
+       font-weight: bold;
+       margin-top: 10px;
+   }
+
+legend {
+    color:orangered;
+    font-size: 22px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+
+}
+
+
+
+
+    </style>
+  </head>
+  <body bgcolor="grey">
+      <form>
+    <fieldset>
+      <legend>Contact details</legend>
+
+      <label for="firstName">First Name</label>
+      <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        placeholder="First name"
+      />
+
+      <label for="lastName">Last Name</label>
+      <input
+        type="text"
+        name="lastName"
+        id="lastName"
+        placeholder="Last Name"
+      />
+
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="Email" />
+
+      <label for="phone">Phone</label>
+      <input
+        type="phone"
+        id="phone"
+        name="phone"
+        placeholder="Phone number"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        required
+      />
+    </fieldset>
+
+    <fieldset>
+      <legend>Choose a movie</legend>
+      <label>
+        <input type="radio" name="movie" value="Godzilla" /> Godzilla
+      </label>
+
+      <label> <input type="radio" name="movie" value="Aladin" /> Aladin </label>
+
+      <label>
+        <input type="radio" name="movie" value="Avengers" /> Avengers
+      </label>
+
+      <label>
+        <input type="radio" name="movie" value="Rocketman" /> Rocketman
+      </label>
+
+      <label>
+        <input type="radio" name="movie" value="Spider-Man" /> Spider-Man
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Choose location</legend>
+
+      <!--
+        Label should not wrap the select element, and should have a for="" property, also some text
+        something like: Choose movie
+      -->
+      <label>
+
+        <!-- Select should have a name and id -->
+        <select>
+          <option value="">Choose cinema</option>
+          <option value="">Cinema City-Iulius</option>
+          <option value="">Cinema City-Vivo</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <fieldset>
+<legend>Terms and conditions</legend>
+<label>
+    <input type="checkbox" name="agreeTerms"  /> I have read and agree the terms and conditions
+</label>
+<br>
+<label>
+    <input  type="submit" name="submit" value="Buy tickets" />  
+</label>
+</form>
+
+<!-- Fieldset should be closed before the form is closed.-->
+    </fieldset>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!--
+    Great work! 
+    See my comments below.
+-->
+<html>
+<head>
+    <title>Cinema Ticket</title>
+</head>
+<style>
+    label {
+        display: block;
+        font-weight: bold;
+        margin-top: 15px;
+       
+        color: rgb(109, 2, 2);
+    }
+
+    input {
+        font-size: 18px;
+    }
+
+    textarea {
+        width: 50%;
+        font-size: 18px;
+    }
+
+    fieldset {
+        border: none;
+        margin-top: 15px;
+        background-color: #f6f6f6;
+    }
+
+    input {
+        font-size: 20px;
+    }
+    
+    button {
+        font-size: 30px;
+        background-color:rgb(109, 0, 0);
+        color:white;
+    }
+</style>
+<body>
+    <form>
+        <!--
+            While your code is 100% correct, for the names and ids it is a better 
+            practice to name them in camelCase. That means that instead of
+            Firstname you will have firstName, Lastname will be lastName.
+
+            More about camelCase here: https://en.wikipedia.org/wiki/Camel_case
+        -->
+        <label for="Firstname">First name</label>
+        <input type="text" name="FirstName" id="Firstname" placeholder="First name" />
+        <label for="Lastname">Last Name</label>
+        <input type="text" name="LastName" id="Lastname" placeholder="Last name" />
+
+        <label for="Email">Email</label>
+        <input type="Email" name="Email" id="Email" placeholder="Email" />
+
+          <label for="Phone">Phone</label>
+        <input type="Phone" name="Phone" id="Phone" placeholder="Phone" />
+        <label for="country">Movies</label>
+        <select>
+            <option value="">Choose a movie</option>
+            <option value="bv">Blue Velvet</option>
+            <option value="fwwm">Fire Walk With Me</option>
+            <option value="md">Mulholland Drive</option>
+        </select>
+        <fieldset>
+            <legend>Select Location</legend>
+            <label>
+                <input type="radio" name="Location" value="Cinema City - Iulius" /> Cinema City - Iulius</label>
+            <label>
+                <input type="radio" name="Location" value="Cinema City - Vivo" /> Cinema City - Vivo</label>
+        </fieldset>
+        <fieldset>
+            <legend>Terms and Conditions</legend>
+            <label>
+                <input type="checkbox" name="acceptTerms" value="terms" /> Accept Terms
+            </label>
+            </fieldset>
+
+            </body>
+            <button id="button">Submit</button>
+            </body>
+            <script>
+                document.getElementById("button").addEventListener("click", function () { alert("Buy tickets"); });
+            </script>
+            </body>
+</html>

@@ -1,0 +1,109 @@
+<!-- 
+  Nice work here also.
+  My comments from the other files apply also here.
+-->
+<html>
+  <head>
+    <title>Cinema Tickets</title>
+  </head>
+  <body>
+    <style>
+        body {
+            background-image: url(https://cdn.celluloidjunkie.com/wp-content/uploads/2018/04/19172213/Silverbird-4DX.jpg);
+        
+            color: white;
+        }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+
+      input {
+        font-size: 18px;
+      }
+      textarea {
+        width: 50%;
+        font-size: 20px;
+      }
+      fieldset {
+        border: none;
+        margin-top: 15px;
+      }
+      legend {
+        font-weight: bold;
+      }
+    </style>
+    <figure>
+        <img witdh="400"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ-CnkTj5XnxChpkSUyc82Fu1ZGQDaLeq2WRLqC8QB5xtyybEa8&usqp=CAU" />
+    <form>
+      <label for="contactdetails">First Name</label>
+      <input
+        type="text"
+        name="contactdetails"
+        id="firstname"
+        placeholder="First Name"
+      />
+
+      <label for="contactdetails">Last Name</label>
+      <input
+        type="text"
+        name="contactdetails"
+        id="lastname"
+        placeholder="Last Name"
+      />
+
+      <label for="contactdetails">Email</label>
+      <input
+        type="email"
+        name="contactdetails"
+        id="email"
+        placeholder="Email"
+      />
+
+      <label for="contactdetails">Phone Number</label>
+      <input
+        type="number"
+        name="contactdetails"
+        id="phonenumber"
+        placeholder="Phone Number"
+      />
+
+      <fieldset>
+        <legend>Chose a movie</legend>
+        <label> <input type="radio" name="movie" />Godzilla 4DX </label>
+        <label>
+          <input type="radio" name="movie" />Spiderman:Homecoming 4DX
+        </label>
+        <label>
+          <input type="radio" name="movie" />Avengers:Age of Ultron 4DX
+        </label>
+        <label> <input type="radio" name="movie" />RoboCop 2 4DX </label>
+        <label> <input type="radio" name="movie" />Call of the Wild 4DX </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Chose a location</legend>
+        <label>
+          <input type="radio" name="location" />Cinema City - Iulius
+        </label>
+        <label>
+          <input type="radio" name="location" />Cinema City - Vivo
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Terms and Conditions</legend>
+        <textarea rows="10">
+Cinema City wants every visit to our cinemas to be as pleasant as possible for our customers. To ensure this, access to
+            Cinema City locations is subject to the following terms and conditions. By purchasing, booking or using a Cinema City
+            ticket, the customer agrees and accepts the following terms and conditions.</textarea
+        >
+        <label> <input type="checkbox" name="terms" />Accept Terms </label>
+      </fieldset>
+      <label> <input type="submit" name="button" />Buy Tickets</label>
+    </form>
+  </body>
+</html>

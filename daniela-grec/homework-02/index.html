@@ -1,0 +1,96 @@
+<!--
+    Looks good.
+    Please see my comments on what can be improved.
+-->
+<html>
+<head>
+    <title>
+    <!-- Missing title-->
+    </title>
+</head>
+<style>
+    label{
+        display: block;
+        font-weight: bold;
+        margin-top: 15px;
+        font-size: 18px;
+    }
+    input {
+        font-size: 18px;
+    }
+fieldset {
+    border: none;
+    margin-top: 15px;
+    font-weight: bold;
+font-size: 18px;
+}
+
+/* On the next line you have an extra < character, that is not needed in CSS */
+<legend {
+    font-weight: bold;
+    font-size: 18px;
+}
+</style>
+<body>
+    <form>
+    <label for="firstname">First name</label>
+     <input type="text" name="firstName" id="fisrtname" placeholder="First name" />
+    
+<label for="lasttname">Last name</label>
+<input type="text" name="lastName" id="fisrtname" placeholder="Last name" />
+
+<label for="email">Email</label>
+<input type="email" name="email" id="email" placeholder="Email" />
+
+<label for="Phone">Phone</label>
+<input type="Phone" name="phone" id="phone" placeholder="Phone" />
+
+<label for="movie">Choose a movie</label>
+
+<!-- Missing name and id on the select -->
+<select>
+
+
+<option for="Choose a movie"></option>
+<option value="godzila">Godzila</option>
+<option value="aladin">Aladin</option>
+<option value="Avengers">Avengers</option>
+<option value="Rocketman">Rocketman</option>
+<option value="Spider-man">Spider-man</option>
+
+
+</select>
+
+<fieldset>
+    <legend>Choose location</legend>
+    <label>
+ <input type="radio" name="location" value="Cinema City-Iulius" /> Cinema City-Iulius
+    
+    </label>
+    <label>
+        <input type="radio" name="location" value="Cinema City-VIVO" /> Cinema City-VIVO
+    </label>
+</fieldset>
+
+
+<!-- The form tag was already opened on line 31. It should not be present here.-->
+<form>
+
+    <!-- 
+        As a best practice for names, ids and for attributes it is better to use names
+        without spaces. It should be <label for="termsAndConditions">...</label>
+    -->
+    <label for="termen and condition">Terms and condition</label>
+<input type="checkbox" name="terms and condition" value="Accept terms" > Accept terms
+
+</form>
+
+<button>Buy Tickets</button>
+
+
+
+    
+
+
+</body>
+</html>

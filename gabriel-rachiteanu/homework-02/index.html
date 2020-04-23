@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework nr.2</title>
+    <style>
+      h1 {
+        margin-top: none;
+      }
+      body {
+        margin-top: 0px;
+        background: rgb(109, 137, 138);
+      }
+      fieldset {
+        border: none;
+      }
+      legend {
+        font-weight: bold;
+      }
+      button {
+        color: brown;
+      }
+    </style>
+  </head>
+  <h1>-This is my Homework-</h1>
+  <body>
+    <!-- 
+        While depends from case to case, form elements should be wrapped in a 
+        <form></form> tag in most cases.
+    -->
+    <fieldset>
+      <legend>Contact details</legend>
+      <label for="firstName">First Name</label>
+      <input
+        type="text"
+        name="firstName"
+        id="firstName"
+        placeholder="First Name"
+      />
+
+      <label for="lastName">Last Name</label>
+      <input
+        type="text"
+        name="lastName"
+        id="lastName"
+        placeholder="last Name"
+      />
+
+      <label for="email">E-mail</label>
+      <input type="e-mail" name="email" id="email" placeholder="email" />
+
+      <label for="phone">Phone</label>
+      <input type="phone" name="phone" id="phone" placeholder="phone" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Choose a movie</legend>
+
+      <!--
+        Radio inputs in the same group should have the same name.
+        All of them should have name="movie".
+    -->
+      <label>
+        <input type="radio" name="godzila" value="godzila" /> Godzila
+      </label>
+
+      <label>
+        <input type="radio" name="aladin" value="aladin" /> Aladin
+      </label>
+
+      <label>
+        <input type="radio" name="avengers" value="avengers" /> Avengers
+      </label>
+
+      <label>
+        <input type="radio" name="rocketman" value="rocketman" /> Rocketman
+      </label>
+
+      <label>
+        <input type="radio" name="spider-man" value="spider-man" /> Spider-man
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Choose location</legend>
+      <select>
+        <option value="Iu">Cinema City - Iulius</option>
+        <option value="Vi">Cinema City - Vivo</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Terms and conditions</legend>
+      <input type="checkbox" name="acceptTerms" value="acceptTerms" /> Accept
+      Terms
+    </fieldset>
+    <button type="submit">Buy Tickets</button>
+  </body>
+</html>

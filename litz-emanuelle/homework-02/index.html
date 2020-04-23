@@ -1,0 +1,132 @@
+<!--
+    Beautiful work!
+-->
+<html>
+
+<head>
+    <title>Cinema ticket</title>
+
+    <style>
+        body {
+            background-image: url("https://image.freepik.com/free-photo/popcorn-background-cinema-concept_23-2148115926.jpg");
+            background-color: #fffdfd;
+            background-size: 100%
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input {
+            font-size: 16px;
+        }
+
+        textarea {
+            width: 50%;
+            font-size: 18px;
+        }
+
+        fieldset {
+            margin-top: 15px;
+            width: 50%;
+            font: bold;
+
+        }
+
+        legend {
+            display: block;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        button {
+            background-color: ivory border none;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #page {
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: ivory;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="formular">
+        <div id="page">
+            <h1>Hello dear Visitor!</h1>
+            <h3>Please answer the questions below!</h3>
+        </div>
+        <fieldset>
+            <legend>Contact details</legend>
+            <label for="firstname">First name</label>
+            <input type="text" name="firstname" id="firstname" placeholder="Last name" />
+            <label for="lastname">Last name</label>
+            <input type="text" name="lastname" id="lastname" placeholder="Last name" />
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Your email" />
+            <label for="phone">Phone</label>
+            <input type="number" name="phone" id="phone" placeholder="Phone" />
+        </fieldset>
+        <fieldset>
+            <legend>Select a movie</legend>
+            <label>
+                <input type="radio" name="movie" value="Godzilla" />Godzilla
+            </label>
+            <label>
+                <input type="radio" name="movie" value="Aladin" /> Aladin
+            </label>
+            <label>
+                <input type="radio" name="movie" value="Avengers" /> Avengers
+            </label>
+            <label>
+                <input type="radio" name="movie" value="Rocketman" /> Rocketman
+            </label>
+            <label>
+                <input type="radio" name="movie" value="Spider-man" /> Spider-man
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Choose a location</legend>
+            <select>
+                <option value="">Choose location!</option>
+                <option value="">Cinema City - Iulius</option>
+                <option value="">Cinema City - Vivo</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Terms and conditions</legend>
+            <label>
+                <input type="checkbox" name="Termns" value="acceptTerms" /> Accept the terms and conditions.
+            </label>
+        </fieldset>
+        </br>
+        <button onclick="buyTicket()">Buy ticket</button>
+        </form>
+    </div>
+    <div id="response" class="hidden">
+        <h1>Thank you!</h1>
+    </div>
+    <script>
+        function buyTicket() {
+            document.getElementById("formular").classList.add("hidden");
+            document.getElementById("response").classList.remove("hidden");
+        }
+    </script>
+</body>
+
+</html>

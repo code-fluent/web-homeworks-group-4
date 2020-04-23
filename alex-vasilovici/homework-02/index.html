@@ -1,0 +1,97 @@
+<!--
+  Great work! 
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework #2</title>
+    <style>
+      label {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+      fieldset {
+        margin-top: 20px;
+        border: none;
+        background-color: #f6f6f6;
+      }
+      legend {
+        font-size: 20px;
+        text-decoration: underline;
+        font-weight: bold;
+        position: relative;
+        top: -10px;
+        color: cornflowerblue;
+      }
+      button {
+        margin-top: 20px;
+        background-color: salmon;
+        font-weight: bolder;
+        box-shadow: 1px 2px 1px black;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Contact details</legend>
+
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName" placeholder="Jon" />
+
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="lastName" placeholder="Doe" />
+
+        <label for="mail">Your email address</label>
+        <input
+          type="email"
+          name="email"
+          id="mail"
+          placeholder="name@example.com"
+        />
+
+        <label for="phoneNumber">Phone Number</label>
+        <input
+          type="number"
+          name="phone"
+          id="PhoneNumber"
+          placeholder="+0742391238"
+        />
+      </fieldset>
+
+      <fieldset>
+        <legend>Choose a movie</legend>
+        <select>
+          <option value="">Movie</option>
+          <option value="GZ">Godzilla</option>
+          <option value="AL">Aladin</option>
+          <option value="AV">Avengers</option>
+          <option value="RM">Rochetman</option>
+          <option value="SM">Spider-man</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Choose Location</legend>
+        <select>
+          <option value="">Location</option>
+          <option value="IL">Cinema City - Iulius</option>
+          <option value="VO">Cinema City - Vivo</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Terms and Conditions</legend>
+        <label for>
+          <!-- In this case you can omit "for" at all -->
+          <input type="checkbox" name="acceptTerms" value="acceptTerms" />
+          Accept Terms
+        </label>
+      </fieldset>
+      <button type="submit">Buy tickets</button>
+    </form>
+  </body>
+</html>

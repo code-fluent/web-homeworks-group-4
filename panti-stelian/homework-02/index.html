@@ -1,0 +1,179 @@
+<!--
+  Perfect!
+
+  See one minor comment below.
+-->
+<html>
+  <head>
+    <title>Cinema-homework</title>
+
+    <style>
+      label {
+        display: block;
+        font-size: 19px;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+
+      input {
+        font-size: 20px;
+      }
+
+      fieldset {
+        border: none;
+        margin-top: 15px;
+        background-color: rgb(230, 230, 250);
+        font-size: 23px;
+      }
+
+      legend {
+        font-weight: bold;
+        margin-top: 15px;
+      }
+
+      button {
+        font-family: courier;
+        background-color: royalblue;
+        color: black;
+        font-size: 20;
+      }
+
+      select {
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Detalii contact</legend>
+
+        <!--
+            While your code is 100% correct, for the names and ids it is a better 
+            practice to name them in camelCase. That means that instead of
+            firstname you will have firstName, lastname will be lastName.
+
+            More about camelCase here: https://en.wikipedia.org/wiki/Camel_case
+        -->
+
+        <label>
+          <input
+            type="text"
+            name="firstname"
+            placeholder="Prenume"
+            id="firstname"
+          />
+        </label>
+
+        <label>
+          <input type="text" name="lastname" placeholder="Nume" id="lastname" />
+        </label>
+
+        <label>
+          <input type="email" name="email" placeholder="Email" id="email" />
+        </label>
+
+        <label>
+          <input type="text" name="text" placeholder="Telefon" id="text" />
+        </label>
+      </fieldset>
+
+      <br />
+      <br />
+      <br />
+
+      <fieldset>
+        <legend>Alege un film</legend>
+
+        <label>
+          <input type="radio" name="film" value="12 Angry Man" />12 Angry Man
+        </label>
+
+        <figure>
+          <img
+            width="120"
+            src="https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UX140_CR0,0,140,209_AL_.jpg"
+          />
+        </figure>
+
+        <label>
+          <input type="radio" name="film" value=" Fight club" />Fight club
+        </label>
+
+        <figure>
+          <img
+            width="120"
+            src="https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX140_CR0,0,140,209_AL_.jpg"
+          />
+        </figure>
+
+        <label>
+          <input type="radio" name="film" value="The Godfather" />The Godfather
+        </label>
+
+        <figure>
+          <img
+            width="120"
+            src="https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY209_CR3,0,140,209_AL_.jpg"
+          />
+        </figure>
+
+        <label>
+          <input type="radio" name="film" value="Inception" />Inception
+        </label>
+
+        <figure>
+          <img
+            width="120"
+            src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_UY209_CR0,0,140,209_AL_.jpg"
+          />
+        </figure>
+
+        <label> <input type="radio" name="film" value="Matrix" />Matrix </label>
+
+        <figure>
+          <img
+            width="120"
+            src="https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX140_CR0,0,140,209_AL_.jpg"
+          />
+        </figure>
+      </fieldset>
+
+      <br />
+      <br />
+
+      <fieldset>
+        <legend>Alege locatia</legend>
+
+        <label>
+          <select>
+            <option value="iulius">Cinema City-Promenada</option>
+            <option value="vivo">Cinema Arta</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <br />
+      <br />
+
+      <fieldset>
+        <legend>Termeni si conditii</legend>
+
+        <label>
+          <input
+            type="checkbox"
+            name="acceptTerms"
+            value="accept termeni si conditii"
+          />Accept termeni si conditii
+        </label>
+      </fieldset>
+
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <button type="submit">Cumpara un bilet!</button>
+    </form>
+  </body>
+</html>

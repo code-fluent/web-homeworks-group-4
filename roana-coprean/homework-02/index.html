@@ -1,0 +1,168 @@
+<!--
+  Nice work. 
+  Please see my comments.
+-->
+<html>
+  <head>
+    <title>Iabilet.homework</title>
+
+    <style>
+            label {
+        display: block;
+        font-size: 19px;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+
+      input {
+        font-size: 20px;
+      }
+
+
+
+      fieldset{
+          border: none;
+          margin-top: 15px;
+          background-color:rgb(250,235,215) ;
+          font-size: 25px;
+      }
+
+      legend{
+          font-weight: bolder;
+          margin-top: 15px;
+          /* Incorrect syntax on the next line.  */
+          position-top
+      }
+
+      button{
+          font-family: verdana ;
+          background-color:rgb(119,136,153)  ;
+          color: black;
+          font-size:20;
+          margin: 12px;
+      }
+
+      select{
+          font-size: 15px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Detalii contact</legend>
+
+        <!--
+          While your code is 100% correct, for the names and ids it is a better 
+          practice to name them in camelCase. That means that instead of
+          firstname you will have firstName, lastname will be lastName.
+
+          More about camelCase here: https://en.wikipedia.org/wiki/Camel_case
+        -->
+
+        <label>
+          <input
+            type="text"
+            name="firstname"
+            placeholder="Prenume"
+            id="firstname"
+          />
+        </label>
+
+        <label>
+          <input type="text" name="lastname" placeholder="Nume" id="lastname" />
+        </label>
+
+        <label>
+          <input type="email" name="email" placeholder="Email" id="email" />
+        </label>
+
+        <label>
+          <input type="text" name="text" placeholder="Telefon" id="text" />
+        </label>
+      </fieldset>
+
+      <br />
+      <br />
+      <br />
+
+      <fieldset>
+        <legend>Alege un film</legend>
+
+        <label>
+          <input
+            type="radio"
+            name="film"
+            value="Reconstituirea(1970)"
+          />Reconstituirea(1970)
+        </label>
+
+        <label>
+          <input
+            type="radio"
+            name="film"
+            value="Padurea Spanzuratilor(1965)"
+          />Padurea Spanzuratilor(1965)
+        </label>
+
+        <label>
+          <input
+            type="radio"
+            name="film"
+            value="Moartea domnului Lazarescu(2005)"
+          />Moartea domnului Lazarescu(2005)
+        </label>
+
+        <label>
+          <input
+            type="radio"
+            name="film"
+            value="4 luni, 3 saptamani si 2 zile(2007)"
+          />4 luni, 3 saptamani si 2 zile(2007)
+        </label>
+
+        <label>
+          <input type="radio" name="film" value="Nunta de piatra(1973)" />Nunta
+          de piatra(1973)
+        </label>
+      </fieldset>
+
+      <br />
+      <br />
+
+      <fieldset>
+        <legend>Alege locatia</legend>
+
+        <label>
+          <select>
+            <option value="iulius">Cinema City - Iulius</option>
+            <option value="vivo">Cinema City - Vivo</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <br />
+      <br />
+
+      <fieldset>
+        <legend>Termeni si conditii</legend>
+
+        <label>
+          <input
+            type="checkbox"
+            name="acceptTerms"
+            value="accept termeni si conditii"
+          />Accept termeni si conditii
+        </label>
+      </fieldset>
+
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <button type="submit">Achizitioneaza un bilet!</button>
+    </form>
+  </body>
+</html>
