@@ -1,0 +1,119 @@
+<!-- 
+  Great job.
+  See my comments below.
+-->
+<html>
+  <head>
+    <title>Login screen</title>
+    <style>
+      .body {
+        background-color: rgb(242, 243, 248);
+        font-family: "Comic Sans MS", cursive, sans-serif;
+      }
+      .h1 {
+        margin: 0px 28px 25px 28px;
+        font-size: 25px;
+      }
+      .paragraph {
+        color: rgb(157, 157, 157);
+        margin: -15px 28px 25px 28px;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+      }
+      .form {
+        width: 360px;
+        margin: 81px 0px 0px 431px;
+        background-color: white;
+        border-radius: 7px;
+      }
+      .email {
+        display: block;
+      }
+      .password {
+        margin: 0px 0px 52px 28px;
+      }
+
+      .input {
+        display: block;
+        border: 1px white;
+        margin: 46px 28px 52px 28px;
+        border-bottom: 1px solid grey;
+
+        padding-left: 2px;
+        font-size: 16px;
+        width: 85%;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+      }
+
+      .input:focus {
+        outline: 4px solid white;
+        border: none;
+        border-bottom: 4px solid rgb(66, 90, 217);
+      }
+
+      .link {
+        display: block;
+        /* 
+        In very rare cases we need to use negative values for margin. 
+        Would be great to find another way to achieve the same result.
+        */
+        margin: -24px 28px 52px 28px;
+        font-size: 13px;
+      }
+
+      .button {
+        display: block;
+        width: 85%;
+        margin: auto;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: rgb(66, 90, 217);
+        position: relative;
+        bottom: 26px;
+        color: white;
+        font-weight: bold;
+      }
+      .img {
+        margin: 30px 20px 25px 25px;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <form class="form">
+      <img
+        class="img"
+        src="data:image/png;base64,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"
+        height="30px"
+        weight="30px"
+      />
+      <h1 class="h1">Welcome back!</h1>
+
+      <p class="paragraph">Log in to continue.</p>
+
+      <!-- You don't need this label, since you have no text in it. -->
+      <label for="email" class="email"></label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="input"
+        placeholder="Email"
+        class="input"
+      />
+
+      <!-- You don't need this label, since you have no text in it. -->
+      <label for="password" class="password"></label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password"
+        class="input"
+      />
+
+      <a href="" class="link">Forgot your password?</a>
+
+      <button class="button">Sign in</button>
+    </form>
+  </body>
+</html>

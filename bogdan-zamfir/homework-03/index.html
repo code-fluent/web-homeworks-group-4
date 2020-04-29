@@ -1,0 +1,101 @@
+<!--
+  Good work. 
+  See my comments below.
+-->
+<html>
+  <head>
+    <title>CSS-homework 3</title>
+  </head>
+  <style>
+    body {
+      background-color: hsl(250, 85%, 98%);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* You could use a more suggestive name for the class, like: logo */
+    .img1 {
+      width: 10%;
+    }
+
+    .form {
+      display: block;
+      width: 400px;
+      margin: 120px auto 120px auto;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .label {
+      margin-bottom: 10px;
+      display: block;
+      font-size: 13px;
+      padding: 5px;
+    }
+    .input {
+      width: 400px;
+      margin: none;
+      resize: vertical;
+      border: 1px #aaaaaa;
+      padding: 5px;
+      border-bottom: 2px solid royalblue;
+      font: bold;
+    }
+    .input:focus {
+      border-color: royalblue;
+    }
+
+    .button {
+      display: block;
+      width: 400px;
+      margin: 20px auto;
+      background-color: royalblue;
+      color: white;
+      font-size: 15px;
+      border: none;
+      border-radius: 4px;
+      padding: 6px 6px;
+    }
+  </style>
+  <body>
+    <form class="form">
+      <img
+        class="img1"
+        src="https://www.pngkey.com/png/full/335-3350419_login-blue-tick-icon.png"
+      />
+
+      <h2>Welcome back!</h2>
+      <h4>Log in to continue.</h4>
+
+      <label for="email" class="label"></label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="input"
+        placeholder="john@gmail.com"
+      />
+
+      <label for="password" class="label"></label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        class="input"
+        placeholder="Password"
+      />
+
+      <!-- The forgot password part should be a link <a> instead of an input -->
+      <label for="forgotPassword" class="label"></label>
+      <input
+        type="url"
+        name="forgotPassword"
+        id="forgotPassword"
+        class="input"
+        placeholder="Forgot your password?"
+      />
+
+      <button class="button">Sign in</button>
+    </form>
+  </body>
+</html>

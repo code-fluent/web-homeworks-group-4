@@ -1,0 +1,139 @@
+<!--
+  Not quite similar with the original design (colors, sizes, etc.)
+  but I really like what you've done here. Looks good.
+
+  See my comments below.
+-->
+<html>
+  <head>
+    <title>Join Hw</title>
+
+    <style>
+      .form {
+        width: 250px;
+        margin: 70px auto 20px auto;
+        margin-bottom: 60px;
+        background-color: white;
+        padding: 50px;
+        border-radius: 5px;
+        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .heading {
+        color: black;
+        font-style: bold;
+        font-family: monospace;
+        text-shadow: 1px 1px;
+      }
+
+      .paragraph {
+        color: rgb(208, 211, 212);
+        font-family: monospace;
+      }
+
+      .input {
+        font-size: 15px;
+        font-family: monospace;
+        display: block;
+        width: 100%;
+        resize: vertical;
+        margin: auto 8 px;
+        padding: 12px 20px;
+        border-radius: 4px;
+        border-bottom-color: 1px solid;
+        outline: none;
+        border-color: transparent;
+        box-sizing: border-box;
+      }
+
+      .input:focus {
+        border-bottom-color: rgb(182, 202, 66);
+      }
+
+      .label {
+        font-size: 15px;
+        display: block;
+      }
+
+      /* Always prefer classes as selectors instad of tag names and ids. */
+
+      h3 {
+        color: rgb(182, 202, 66);
+        font-family: monospace;
+      }
+
+      button {
+        /* Next line should be: display: inline-block; */
+        display: inline block;
+        font-size: 10px;
+        font-family: monospace;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 0px;
+        width: 100%;
+        text-align: center;
+        margin: 20px auto;
+        /* Margin bottom can have only a single value. Did you want margin instead? */
+        margin-bottom: 19px auto;
+        background-color: rgb(182, 202, 66);
+        color: white;
+      }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+
+  <body style="background-color: rgb(166, 178, 149);">
+    <form class="form">
+      <i class="fas fa-user-secret" style="font-size: 48px; color: black;"></i>
+      <h1 class="heading">Bienvenue!</h1>
+      <p class="paragraph">Sing in to continue.</p>
+
+      <label for="email" class="label"></label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="input"
+        placeholder="Email"
+      />
+
+      <label for="password" class="label"></label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password"
+        class="input"
+      />
+
+      <!--
+        This should be an <a> tag.
+      -->
+      <h3>
+        <u>
+          <label id="h3" for="text" class="input">Forgot your password?</label>
+        </u>
+      </h3>
+
+      <script>
+        document.getElementById("h3").addEventListener("click", function () {
+          alert("Try again later!");
+        });
+      </script>
+
+      <button id="button" style="font-size: 24px;">
+        Sing in <i class="fas fa-user-secret"></i>
+      </button>
+
+      <script>
+        document
+          .getElementById("button")
+          .addEventListener("click", function () {
+            alert("Something went wrong...");
+          });
+      </script>
+    </form>
+  </body>
+</html>

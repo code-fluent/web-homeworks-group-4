@@ -1,0 +1,109 @@
+<!--
+  Looks good.
+  See my comment below.
+-->
+
+<html>
+  <head>
+    <title>Forms</title>
+    <style>
+      body {
+        background-color: #eeeeee;
+      }
+      .form {
+        width: 400px;
+        height: 450px;
+        margin: 70px auto 70px auto;
+        background-color: white;
+        padding: 15px;
+        box-shadow: 5px 10px 18px #888888;
+      }
+
+      .content {
+        max-width: 500px;
+        margin: auto;
+        padding: 40px;
+      }
+
+      /* Always prefer using class names instead of tag names or ids as CSS selectors */
+      h1 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 550;
+        font-stretch: semi-expanded;
+        margin-bottom: none;
+      }
+
+      h3 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin-top: none;
+        font-weight: lighter;
+        color: #b1afaf;
+        margin-bottom: 15px;
+      }
+
+      .input {
+        width: 100%;
+        display: block;
+        margin-bottom: 15px;
+        padding: 6px;
+        resize: vertical;
+        border: none;
+        border-bottom: solid #aaaaaa;
+        border-width: thin;
+        outline: none;
+        font-size: 15px;
+      }
+
+      .input:focus {
+        border-color: #3388ff;
+      }
+
+      .button {
+        width: 100%;
+        padding: 6px 0;
+        border: none;
+        border-radius: 4px;
+        margin-top: 15px;
+        background-color: #3388ff;
+        font-size: 15px;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form class="form">
+      <div class="content">
+        <img
+          width="50;"
+          src="https://unioncountyymca.org/wp-content/uploads/2016/12/cropped-checkmark-blue-1024x775.png"
+        />
+        <h1>Welcome back!</h1>
+        <h3>Log in to continue.</h3>
+
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="john@gmail.com"
+          class="input"
+        />
+
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          class="input"
+        />
+
+        <a
+          href="https://scene.zeplin.io/project/5d9104d9b6c1b6025612e5b5/screen/5d91050846a638025ce4c051"
+          >Forgot your password?</a
+        >
+
+        <button class="button">Sign in</button>
+      </div>
+    </form>
+  </body>
+</html>

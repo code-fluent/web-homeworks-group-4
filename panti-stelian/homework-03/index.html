@@ -1,0 +1,150 @@
+<!--
+  Not quite similar with the original design,
+  but I like what you've build. Looks pretty good!
+
+  See my comments below.
+-->
+<html>
+  <head>
+    <title>FC DINAMO</title>
+
+    <style>
+              .form {
+                width: 250px;
+                margin: 30px auto 20px auto;
+                margin-bottom: 60px;
+                background-color: whitesmoke;
+                padding: 50px;
+                border-radius: 18px;
+                box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+              }
+
+              .heading {
+                color: red;
+                font-style: bold;
+                /* You can use the monospace font family directly on body, so all other elements (except inputs) will inherit it. */
+                font-family: monospace;
+                text-shadow: 1px 1px;
+                text-align: center;
+              }
+
+              .paragraph {
+                color: black;
+                font-family: monospace;
+              }
+
+              .input {
+                font-size: 15px;
+                font-family: monospace;
+                display: block;
+                width: 100%;
+                resize: vertical;
+                margin: auto 8 px;
+                padding: 8px 10px;
+                border-radius: 4px;
+                border-bottom-color: 1px solid rgb(182, 202, 66);
+                outline: none;
+                border-color: transparent;
+                box-sizing: border-box;
+              }
+
+              .input:focus {
+                border-bottom-color: red;
+                
+              }
+
+              .label {
+                font-size: 15px;
+                display: block;
+              }
+
+              /* Always prefer using class names instead of tag names or ids as CSS selectors */
+              h3 {
+                color: red;
+                font-family: monospace;
+              }
+
+              button {
+                /* Next line should be display: inline-block; */
+                display: inline block;
+                font-size: 10px;
+                font-family: monospace;
+                border: none;
+                border-radius: 5px;
+                padding: 5px 0px;
+                text-align: center;
+                margin: 20px auto;
+                background-color: red;
+                color: white;
+                width: 100%;
+              }
+
+            
+    </style>
+
+    
+  </head>
+
+  <!-- PRO tip: Instead of inline styles always prefer using a class.-->
+  <body style="background-color:red;">
+    <form class="form">
+      <!-- 
+        Try to avoid using html for styling. Like using <center> to put something to the center.
+        Use CSS instead (margins)  
+      -->
+      <center>
+      <figure>
+        <img width="100"
+         src="https://seeklogo.com/images/F/F_C__Dinamo_Bucuresti-logo-B0972B5FBC-seeklogo.com.png"/>
+        </center>
+      </figure>
+      <h1 class="heading">Doar Dinamo Bucuresti</h1>
+      <p class="paragraph">Acceseaza ADPD</p>
+
+      <label for="email" class="label"></label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="input"
+        placeholder="Email"
+      />
+
+      <br>
+
+      <label for="password" class="label"></label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Parola"
+        class="input"
+      />
+
+      <!-- The forgot password link should be a <a> tag -->
+      <h3>
+        <u>
+          <label id="h3" for="text" class="input">Ti-ai uitat parola?</label>
+        </u>
+      </h3>
+
+      <script>
+        document.getElementById("h3").addEventListener("click", function () {
+          /* While I totally understand your team preferences, to keep this course professional
+          please avoid similar language in the future. Thank you! */
+          alert("MUIE steaua");
+        });
+      </script>
+
+      <button id="button" style="font-size: 24px;">Logheaza-te</button>
+      <script>
+        document
+          .getElementById("button")
+          .addEventListener("click", function () {
+            alert("Bine ai venit!");
+          });
+      </script>
+    </form>
+
+  </body>
+</html>

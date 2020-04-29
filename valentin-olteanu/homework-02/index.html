@@ -1,0 +1,83 @@
+<!--
+    Looking good.
+    See my comments below.
+-->
+<html>
+
+<head>
+    <title>Buy a ticket</title>
+    <style>
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input {
+            font-size: 18px;
+        }
+
+        textarea {
+            width: 50%;
+            font-size: 18px;
+        }
+
+        fieldset {
+            border: none;
+            margin-top: 15px;
+            background-color: #f6f6f6;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="firstName">First name</label>
+        <input type="text" name="firstName" id="firstName" placeholder="First name" />
+
+        <label for="lastName">Last name</label>
+        <input type="text" name="lastName" id="lastName" placeholder="Last name" />
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Email" />
+
+        <label for="phone">Phone number</label>
+        <input type="textnumber" name="phone" id="phone" placeholder="Phone number" />
+
+    <label for="country">Choose a movie</label>
+    <!--
+        The values on options should be something like: "godzilla", "avangers", etc. instead of country names.
+        Also two options options should not have the same name.
+    -->
+    <select>
+        <option value="">Choose a movie</option>
+        <option value="ro">Godzilla</option>
+        <option value="uk">Avengers</option>
+        <option value="usa">Avatar</option>
+        <option value="usa">From Paris with love</option>
+    </select>
+    </label>
+    <label for="country">Choose location</label>
+    <select>
+        <option value="">Choose location</option>
+        <!-- Missing value on the line-->
+        <option value="">Cinema City - Iulius</option>
+        <option value="ro">Cinema City - Viva</option>
+    </select>
+    </label>
+    <fieldset>
+        <legend>Terms and conditions</legend>
+        <label>
+            <input type="checkbox" name="acceptTerms" value="acceptTerms"/> Agree with terms and conditions
+        </label>
+    </fieldset>
+    </form>
+    <button type="submit">Buy Tickets</button>
+
+</body>
+        
+</html>

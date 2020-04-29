@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
+    <title>Login</title>
+    <style>
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    background-color: rgb(234, 235, 238);
+    height: 100vh;
+}
+img{
+    display: block;
+    border: 10px;
+    margin: 5px 200px 10px 5px;
+    float: left;
+}
+.login-box{
+    border: 2px solid rgb(255, 254, 254);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 370px;
+    height: 470px;
+    border-radius: 7px;
+    position: absolute;
+    padding: 25px;
+    top: 10%;
+    left: 40%;
+    background-color: white;
+}
+.login-box h1{
+    float: left;
+    display: block;
+    margin-bottom: 0;
+    margin-top: 15px;
+    padding: 0 5px;
+}
+.login-box h2{
+    float: left;
+    font-size: 20px;
+    margin-top: 1px;
+    margin-bottom: 50px;
+    padding: 5px;
+    color: rgb(187, 187, 187);
+    font-weight:400;
+}
+.textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 1px;
+    padding: 2px 0;
+    margin: 35px 0;
+    border-bottom: 2px solid rgb(206, 206, 212);
+}
+.textbox:hover{
+  border-color: rgb(76, 76, 250);
+}
+.textbox input{
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background: none;
+    color: black;
+    font-size: 19px;
+    width: 80%;
+    float: left;
+    margin: 0;
+    padding-bottom: 4px;
+}
+
+.link{
+    margin-top: 35px;
+    
+}
+.btn{
+    font-family: 'Manrope', sans-serif;
+    width: 100%;
+    background-color: rgb(76, 76, 250);
+    border-radius: 6px;
+    margin-top: 46px;
+    border: 2px solid rgb(76, 76, 250);
+    color: white;
+    padding: 6px;
+    font-size: 18px;
+}
+    </style>
+</head>
+
+<body>
+   
+        <div class="login-box">
+            <img src="check.jpg" width="50" height="50" alt="">
+             </span>
+            <h1>Welcome back!</h1>
+            <h2>Log in to continue.</h2>
+        
+            <!-- You can do this without an addition div, only using the input -->
+            <div class="textbox">
+                <input type="text" placeholder="Email">
+            </div>
+        
+            <!-- You can do this without an addition div, only using the input -->
+            <div class="textbox">
+                <input type="password" placeholder="Password">
+            </div>
+        
+            <!-- You can do this without an addition div, only using the <a> element -->
+            <div class="link">
+                <a href="www.aaa.com">Forgot your password?</a>
+            </div>
+        
+            <!-- You can also write this as
+                <button class="btn">Sign in</button>
+             -->
+            <input type="button" class="btn" value="Sign in">
+        </div>
+</body>
+</html>
+
