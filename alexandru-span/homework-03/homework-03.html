@@ -1,0 +1,73 @@
+<!-- Great work. See my two comments. -->
+<html>
+  <head>
+    <title>Homework 03</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .top {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: rgb(0, 52, 87);
+        height: 50px;
+        width: 100%;
+      }
+
+      .bot {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgb(206, 134, 2);
+        height: 50px;
+        width: 100%;
+      }
+
+      .left {
+        position: absolute;
+        top: 50px;
+        bottom: 50px;
+        left: 0px;
+        background-color: rgb(0, 63, 27);
+        /* Instead using height 625px which will work only if for your laptop resolution, you should use calc() here. */
+        height: 625px;
+        width: 250px;
+      }
+
+      .right {
+        position: absolute;
+        top: 50px;
+        bottom: 50px;
+        right: 0px;
+        background-color: rgb(255, 117, 98);
+        height: 625px;
+        width: 250px;
+      }
+
+      .middle {
+        position: absolute;
+        top: 50px;
+        bottom: 50px;
+        right: 250px;
+        left: 250px;
+        background-color: rgb(206, 191, 188);
+        height: 625px;
+
+        /* Unnecessary % character on next line */
+        width: auto%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box top"></div>
+      <div class="box left"></div>
+      <div class="box middle"></div>
+      <div class="box right"></div>
+      <div class="box bot"></div>
+    </div>
+  </body>
+</html>
