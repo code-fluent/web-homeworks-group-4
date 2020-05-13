@@ -1,0 +1,53 @@
+<!-- 
+  Good work with the hearth animation.
+  The transition for the box needs to be fixed. Missing transition property.
+-->
+<html>
+  <head>
+    <title>Homework 5</title>
+    <style>
+      body {
+        margin: 50px;
+        background-color: rgb(249, 122, 108);
+      }
+      .box {
+        margin-left: 10px;
+        width: 300px;
+        height: 200px;
+        background-color: #ff1493;
+      }
+      .box:hover {
+        background-color: #00ced1;
+        transform: scale(1.33, 1.3);
+      }
+
+      .heart {
+        margin-left: 300px;
+        animation-name: tema2;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+      }
+
+      @keyframes tema2 {
+        from {
+          transform: scale(1) translate(100px);
+        }
+        to {
+          transform: scale(1.1) translate(120px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="heart">
+      <img
+        src="http://clipart-library.com/images_k/white-heart-transparent-background/white-heart-transparent-background-1.png"
+        width="300px"
+        height="300px"
+      />
+    </div>
+  </body>
+</html>

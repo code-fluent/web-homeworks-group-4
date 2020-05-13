@@ -1,0 +1,67 @@
+<!-- Perfect work! -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Aici am creeat eu inima dar fiindca am facut treaba asta nu reusesc sa creez efectul ala de dispersare
+     Am incercat sa pun o imagine dar imi tot ramana background-ul ala cu patratele in spate si nu stiu cum sa scap de el
+     O sa mai incerc si daca reusesc , retrimit partea asta din tema pana joi. Merci. */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ff6c61;
+        width: 400px;
+        height: 300px;
+      }
+
+      .rotate {
+        transform: rotate(45deg);
+      }
+      .beating-heart {
+        background-color: white;
+        height: 50px;
+        width: 50px;
+        box-shadow: 5px 5px 30px -5px rgb(58, 54, 54);
+        animation: beat 1.2s infinite ease-out;
+      }
+
+      .beating-heart:before,
+      .beating-heart:after {
+        content: "";
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        position: absolute;
+      }
+      .beating-heart:before {
+        top: -22px;
+        left: 0;
+      }
+      .beating-heart:after {
+        left: -22px;
+      }
+      @keyframes beat {
+        to {
+          transform: scale(1.5, 1.5);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="rotate">
+        <div class="beating-heart"></div>
+      </div>
+    </div>
+  </body>
+</html>

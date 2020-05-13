@@ -1,0 +1,154 @@
+<!-- Very elegant solution. 👏-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock Challenge</title>
+
+    <style>
+      body {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background: #d9d7dd;
+      }
+      .aspect {
+        overflow: hidden;
+        position: relative;
+        width: 300px;
+        height: 300px;
+      }
+
+      .clock {
+        background: #ffffff;
+        border-radius: 50%;
+        border: 5px solid white;
+        box-shadow: inset 2px 3px 8px 2px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+      }
+      .minutes,
+      .hour {
+        position: absolute;
+        width: 5px;
+        height: 75px;
+        top: -75px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: black;
+
+        z-index: 1;
+      }
+      .hour {
+        animation: tick 43200s infinite linear;
+        transform: rotate(-90deg);
+      }
+      .minutes {
+        height: 100px;
+        width: 3px;
+        top: -100px;
+        transform: rotate(36deg);
+        animation: tick 3600s infinite linear;
+      }
+      .seconds {
+        position: absolute;
+        background: crimson;
+        width: 2px;
+        height: 135px;
+        top: -135px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        z-index: 1;
+        animation: tick 60s infinite linear;
+      }
+      .seconds,
+      .minutes,
+      .hour {
+        transform-origin: bottom center;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+      }
+
+      .center {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 100px;
+        background: rgb(255, 255, 255);
+        border: 2px solid crimson;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+        margin: auto;
+        z-index: 2;
+      }
+      .tail {
+        position: absolute;
+        transform-origin: top center;
+        top: 0;
+        bottom: -20px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 2px;
+        height: 20px;
+        background: crimson;
+        box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.4);
+        animation: tick 60s infinite linear;
+        z-index: 1;
+      }
+      .container {
+        height: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 20px;
+      }
+      .nine {
+        position: relative;
+        top: 45px;
+        left: 4px;
+        justify-content: center;
+        align-self: flex-start;
+      }
+      .three {
+        position: relative;
+        top: -45px;
+        left: -4px;
+        justify-content: center;
+        align-self: flex-end;
+      }
+
+      @keyframes tick {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="aspect">
+        <div class="center"></div>
+        <div class="hour"></div>
+        <div class="minutes"></div>
+        <div class="seconds"></div>
+        <div class="tail"></div>
+        <div class="container">
+          <span class="twelve">12</span>
+          <span class="nine">9</span>
+          <span class="three">3</span>
+          <span class="six">6</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

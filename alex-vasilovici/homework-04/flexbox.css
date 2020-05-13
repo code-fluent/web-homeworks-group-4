@@ -1,0 +1,51 @@
+
+/* CSS pentru prima varianta de raspuns
+.row {
+  display: flex;
+  flex-wrap: wrap;
+} */
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 70%;
+  margin: 80px auto;
+}
+/* O alta varianta pentru a centra flex-container-ul
+
+.flex-container {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+} */
+
+/* css pentru prima si a doua varianta de raspuns */
+body {
+  background-color: black;
+}
+.color {
+  margin: 0;
+}
+.blue {
+  background-color: #004c62;
+  height: 60px;
+  width: 100%;
+}
+.green {
+  background-color: #155a3e;
+  width: 20%;
+  height: 70vh;
+}
+.lightgrey {
+  background-color: #e2cbbb;
+  width: 60%;
+}
+.orange {
+  background-color: #ff6b57;
+  width: 20%;
+}
+.yellow {
+  background-color: #eea94e;
+  height: 60px;
+  width: 100%;
+}

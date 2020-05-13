@@ -1,0 +1,73 @@
+<!-- 
+    Looks good. Nice to see using grid, and good use of special html elements like article, header, etc.
+    There is a problem with a centre area though, that needs to be fixed.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      main {
+        display: grid;
+        grid-template-areas:
+          "topbar  topbar   topbar"
+          "ads     content  sidebar"
+          "footer  footer   footer";
+        grid-template-columns: 1fr 5fr 1fr;
+        grid-template-rows: 30px auto 0px;
+        align-content: stretch;
+      }
+      header {
+        position: relative;
+        height: 50px;
+        grid-area: topbar;
+        background-color: rgb(7, 66, 105);
+      }
+
+      aside {
+        height: 550px;
+        grid-area: ads;
+        background-color: rgb(21, 78, 47);
+      }
+
+      article {
+        height: 550px;
+        width: 1030px;
+        grid-area: content;
+        background-color: rgb(218, 182, 169);
+      }
+
+      nav {
+        height: 550px;
+        grid-area: sidebar;
+        background-color: rgb(226, 98, 98);
+      }
+
+      footer {
+        align-content: stretch;
+        height: 50px;
+        grid-area: footer;
+        background-color: rgb(216, 151, 54);
+      }
+    </style>
+    <title>Homework.03</title>
+  </head>
+  <body>
+    <main>
+      <header></header>
+
+      <article></article>
+      <aside></aside>
+      <nav></nav>
+
+      <footer></footer>
+    </main>
+  </body>
+</html>
