@@ -1,0 +1,163 @@
+<!-- 
+    From a visual perspective ii perfect job.
+    Left some comments below on code.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Title should be always descriptive, like: Todo App -->
+    <title>Document</title>
+    <style>
+      /* Smart solution! */
+      * {
+        font-family: "Montserrat", sans-serif;
+      }
+      body {
+        margin-top: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f6f7f8;
+        /* No need to specify font-family again. */
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .container {
+        width: 440px;
+        height: 420px;
+        padding: 35px 30px;
+        border-radius: 5px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        width: 40px;
+        height: 32px;
+        margin-bottom: 25px;
+      }
+
+      .title {
+        margin: 0 0 35px 0;
+        font-size: 22px;
+      }
+      .input {
+        width: 100%;
+        height: 30px;
+        padding: 5px;
+        font-size: 20px;
+        border: none;
+        border-bottom: 1px solid rgb(224, 221, 221);
+        color: rgb(221, 216, 216);
+      }
+
+      /* Always prefer class names instead of tag names */
+      ol {
+        list-style: none;
+        font-size: 18px;
+        padding-inline-start: 0;
+        margin-top: 30px;
+      }
+
+      /* Typo in name, it should be only: .check */
+      .checkk {
+        display: flex;
+        margin-top: 15px;
+      }
+
+      /*
+      Always prefer using class names for styling instead of ids: NaN;
+      Ids should be unique per page, but you have multiple elements with the same id.
+      */
+      #squaredFour {
+        height: 20px;
+        width: 20px;
+        color: blue;
+        background-color: lightblue;
+      }
+
+      /* 
+      Would be great to have more suggestive class names. */
+      .A,
+      .B,
+      .C,
+      .D {
+        margin-left: 8px;
+      }
+      .final {
+        display: flex;
+        margin-top: 35px;
+      }
+
+      /* Prefer class names starting with lowercase, like: .all, .show */
+      .All {
+        margin-left: 10px;
+      }
+      .Show {
+        margin-right: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form class="container">
+      <img class="logo" src="logo@2x.png" />
+      <h1 class="title">Prepare for the realese</h1>
+      <input class="input" type="text" placeholder="Add a new Todo" />
+      <ol>
+        <div class="checkk">
+          <input
+            type="checkbox"
+            value="None"
+            id="squaredFour"
+            name="check"
+            checked
+          />
+          <li class="A">Make a todo list</li>
+        </div>
+        <div class="checkk">
+          <input
+            type="checkbox"
+            value="None"
+            id="squaredFour"
+            name="check"
+            checked
+          />
+          <li class="B">Check off first item</li>
+        </div>
+        <div class="checkk">
+          <input
+            type="checkbox"
+            value="None"
+            id="squaredFour"
+            name="check"
+            checked
+          />
+          <li class="C">Realize you already did 2 things today</li>
+        </div>
+        <div class="checkk">
+          <input
+            type="checkbox"
+            value="None"
+            id="squaredFour"
+            name="check"
+            checked
+          />
+          <li class="D">Reward yourself with a nice, long nap</li>
+        </div>
+      </ol>
+      <div class="final">
+        <p class="Show">Show:</p>
+        <p class="All">All</p>
+        <p class="All"><a href="#">Completed</a></p>
+        <p class="All"><a href="#">Incompleted</a></p>
+      </div>
+    </form>
+  </body>
+</html>

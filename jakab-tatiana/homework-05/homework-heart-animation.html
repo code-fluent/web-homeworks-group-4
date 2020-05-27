@@ -1,0 +1,36 @@
+<!-- 
+  The code looks great. The scale should be between scale(0.7) to scale(1)
+  to be more similar to the one from the design provided.
+ -->
+<html>
+  <head>
+    <title>Heart animation</title>
+    <style>
+      body {
+        background-color: #f46f60;
+      }
+
+      .heart {
+        display: block;
+        width: 200px;
+        margin: 200px auto;
+        animation: heartbeat 2.5s ease-out infinite;
+      }
+
+      @keyframes heartbeat {
+        from {
+          transform: scale(-3.3);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      class="heart"
+      src="https://clipart.info/images/ccovers/1518056312pink-heart-transparent-background.png"
+    />
+  </body>
+</html>

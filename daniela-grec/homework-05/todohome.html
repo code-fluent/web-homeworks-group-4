@@ -1,0 +1,84 @@
+<!--
+  Looks good. Left some comments.
+-->
+<html>
+  <head>
+    <title>Todo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* The Montserrat font family should be set on body, so you don't need
+        to set it later on h1 and h2
+       */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: orange;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container {
+        width: 350px;
+        padding: 35px 30px;
+        border-radius: 5px;
+        background-color: white;
+      }
+
+      /* Always prefer using class names instead of tag names in CSS */
+      h1 {
+        color: black;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      /* Always prefer using class names instead of tag names in CSS */
+      h2 {
+        color: black;
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+      }
+
+      .todo {
+        display: block;
+        margin-bottom: 10px;
+        position: relative;
+        color: orange;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      /* Always prefer using class names instead of tag names in CSS */
+      button {
+        background-color: orange;
+        border: none;
+        color: black;
+        padding: 5px;
+        border-radius: 4px;
+        display: block;
+        font-family: "Montserrat", sans-serif;
+        width: 20%;
+        margin-top: 4%;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="container">
+      <img
+        width="150px"
+        src="https://miastodzieci.pl/wp-content/uploads/2015/08/Cinema-City-Kazimierz-350x300.png"
+      />
+
+      <h1 class="title">Cinema City</h1>
+      <h2>Choose the movie you want:</h2>
+
+      <label class="todo"> <input type="checkbox" />Tenet </label>
+      <label class="todo"> <input type="checkbox" />No time to die</label>
+      <label class="todo"> <input type="checkbox" />Like a Boss</label>
+      <label class="todo"> <input type="checkbox" />Jumanji</label>
+
+      <button>Send</button>
+    </form>
+  </body>
+</html>

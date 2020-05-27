@@ -1,0 +1,59 @@
+<!-- 
+    display: flex; should be set on the container, not on the boxes.
+ -->
+<html>
+  <head>
+    <title>Flexbox Homework</title>
+    <style>
+      .box.top {
+        background-color: #113863;
+        flex-direction: column;
+        height: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -8px;
+        margin-bottom: 5px;
+        margin-top: -8px;
+      }
+
+      .box.left {
+        background-color: rgba(4, 80, 51, 0.979);
+        flex-direction: row;
+        width: 202px;
+        height: 500px;
+        margin-left: -8px;
+        margin-top: -5px;
+      }
+
+      .box.middle {
+        background-color: rgb(207, 186, 162);
+        align-items: center;
+        width: 878px;
+        margin-left: 191px;
+        flex-direction: row;
+        margin-top: -500px;
+        height: 500px;
+      }
+      .box.right {
+        background-color: rgb(230, 98, 65);
+        align-items: flex-end;
+        width: 200px;
+        height: 500px;
+        margin-left: 1064px;
+        margin-top: -500px;
+      }
+      .box.bottom {
+        background-color: rgb(206, 168, 63);
+        height: 60px;
+        margin-left: -8px;
+      }
+    </style>
+  </head>
+  <div class="container">
+    <div class="box top"></div>
+    <div class="box left"></div>
+    <div class="box middle"></div>
+    <div class="box right"></div>
+    <div class="box bottom"></div>
+  </div>
+</html>

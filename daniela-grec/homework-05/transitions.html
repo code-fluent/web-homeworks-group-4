@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Transitions</title>
+    <style>
+      .div {
+        width: 300px;
+        height: 200px;
+        margin: 10px;
+        background-color: #ff1493;
+        /* Transition should be done on background-color, eventually width and height since these are the changing values. */
+        transition: transform 1s linear;
+      }
+
+      .div:hover {
+        width: 400px;
+        height: 260px;
+        background-color: #00ced1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div"></div>
+  </body>
+</html>

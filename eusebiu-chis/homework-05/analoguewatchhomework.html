@@ -1,0 +1,115 @@
+<!-- 
+    It is a good start.
+    You are close. Hope you can finish it later.
+ -->
+<html>
+  <head>
+    <title>Analogue watch</title>
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: gainsboro;
+      }
+      .aspect {
+        width: 400px;
+        height: 400px;
+        position: relative;
+      }
+      .container {
+        background: white;
+        border-radius: 50%;
+        border: 5px white solid;
+        box-shadow: 2px 3px 8px 2px rgb(0, 0, 0, 0.2) inset;
+        font-size: 20px;
+        height: 400px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .center {
+        position: absolute;
+        background: white;
+        border-radius: 100px;
+        width: 10px;
+        height: 10px;
+        box-shadow: 0px 3px 5px 0px rgb(0, 0, 0, 0.5);
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        margin: auto;
+        border: 2px solid red;
+        z-index: 2;
+      }
+
+      .tail {
+        position: absolute;
+        transform-origin: top center;
+        top: 0;
+        bottom: -20px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 2px;
+        height: 30px;
+        background: crimson;
+        box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.4);
+        animation: tick 60s infinite linear;
+        z-index: 1;
+      }
+      .minutes,
+      .hours {
+        width: 5px;
+        height: 120px;
+        background-color: black;
+        position: absolute;
+        top: -120px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        margin: auto;
+      }
+
+      .seconds {
+        position: absolute;
+        background: crimson;
+        width: 2px;
+        height: 135px;
+        top: -135px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        z-index: 1;
+        animation: tick 60s infinite linear;
+      }
+      .minutes {
+        height: 100px;
+        width: 3px;
+        top: -100px;
+        transform: rotate(36deg);
+        animation: tick 3600s infinite linear;
+      }
+
+      @keyframes tick {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="aspect">
+        <div class="center"></div>
+        <div class="hours"></div>
+        <div class="minutes"></div>
+        <div class="seconds"></div>
+        <div class="tail"></div>
+      </div>
+    </div>
+  </body>
+</html>

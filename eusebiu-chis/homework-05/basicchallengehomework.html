@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Challenge</title>
+    <style>
+      .basic {
+        width: 300px;
+        height: 200px;
+        background-color: #ff1493;
+      }
+
+      .basic:hover {
+        width: 400px;
+        height: 260px;
+        background-color: #00ced1;
+        /* Transitions should always mention the CSS property we want to transition
+          e.g. transition: background-color 1s linear;
+           */
+
+        /* Also the transition should be defined in the previous selector not in :hover, otherwise it works only one way. */
+        transition: 1s linear;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="basic"></div>
+  </body>
+</html>

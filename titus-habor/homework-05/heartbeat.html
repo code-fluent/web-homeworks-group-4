@@ -1,0 +1,37 @@
+<!--
+  Perfect!
+-->
+<html>
+  <head>
+    <title>Heart animation</title>
+    <style>
+      body {
+        background-color: #ffffff;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .heart {
+        width: 250px;
+        margin-top: 250px;
+        margin: none;
+        animation: heartbeat 1s ease-out infinite;
+      }
+      @keyframes heartbeat {
+        from {
+          transform: scale(0.7);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img class="heart" src="https://vistapointe.net/images/heart-1.jpg" />
+    </div>
+  </body>
+</html>

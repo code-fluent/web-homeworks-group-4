@@ -1,0 +1,67 @@
+<!-- Great work. -->
+<html>
+  <head>
+    <title>Heart Animation</title>
+    <style>
+      body {
+        background-color: rgb(248, 226, 226);
+      }
+
+      .heart {
+        display: block;
+        width: 200px;
+        margin: 200px auto;
+        box-shadow: none;
+        animation: heartbeat 1.5s ease-out infinite;
+      }
+
+      .heart1 {
+        display: block;
+        width: 200px;
+        margin: 0px auto;
+        position: relative;
+        top: -400px;
+        opacity: 0;
+        animation: heartbeat1 1.5s ease-out infinite forwards;
+      }
+
+      @keyframes heartbeat {
+        0% {
+          transform: scale(1);
+        }
+
+        40% {
+          transform: scale(1.5);
+        }
+
+        80% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes heartbeat1 {
+        0% {
+          transform: scale(1);
+        }
+
+        40% {
+          transform: scale(1.5);
+        }
+
+        85% {
+          transform: scale(1);
+        }
+
+        100% {
+          transform: scale(1.7);
+          opacity: 0.1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <img class="heart" src="heart1.png" />
+    <img class="heart1" src="heart1.png" />
+  </body>
+</html>

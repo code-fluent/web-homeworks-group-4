@@ -1,0 +1,56 @@
+<!-- Beautiful work. Congrats! -->
+<html>
+  <head>
+    <title>Heart-animations</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-image: url(https://cdn.pixabay.com/photo/2018/08/14/06/43/love-3604788_1280.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      h1 {
+        font-family: "Dancing Script", cursive;
+        text-align: center;
+        padding: 10px;
+      }
+
+      h2 {
+        font-family: "Dancing Script", cursive;
+        text-align: center;
+      }
+
+      .heart {
+        display: block;
+        width: 100px;
+        margin: 50px auto;
+        animation: heartbeat 0.5s ease-out infinite;
+      }
+
+      @keyframes heartbeat {
+        from {
+          transform: scale(0.7);
+        }
+
+        to {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Hold my hand, don't let me</h1>
+    <h2>Never...</h2>
+
+    <img
+      class="heart"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/WikiFont_uniE033_-_heart_-_red.svg/1200px-WikiFont_uniE033_-_heart_-_red.svg.png"
+    />
+  </body>
+</html>
