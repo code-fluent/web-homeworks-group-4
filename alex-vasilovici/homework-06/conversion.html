@@ -1,0 +1,138 @@
+<!-- 
+  ✅ Trainer notes:
+  The solution is great. One comment though: Always prefer using classes for styling, and
+  try to avoid tag names as a general best practice.
+ -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversion</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-family: "Montserrat", sans-serif;
+        background-color: #d9d7dd;
+      }
+      .conversion-form {
+        background-color: white;
+        width: 300px;
+        box-shadow: 4px 6px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+      }
+
+      .heading {
+        font-size: 30px;
+        text-align: center;
+        color: royalblue;
+        margin: 70px 0px 40px 0px;
+      }
+      label {
+        display: block;
+        margin: 50px 20px;
+      }
+      span {
+        display: block;
+        margin: 15px 0px 5px 0px;
+      }
+      button {
+        color: rgb(51, 46, 46);
+        background-color: rgb(200, 193, 223);
+        border-radius: 4px;
+        box-shadow: 1px 1px 2px black;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input {
+        border: none;
+        border-bottom: 1px solid black;
+        margin-right: 10px;
+        outline: none;
+      }
+      input:hover {
+        border-color: royalblue;
+        border-bottom: 2px solid royalblue;
+      }
+      #timeOfDay {
+        margin: 20px 0px 40px 20px;
+        color: rosybrown;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="conversion-form">
+      <h1 class="heading">Conversion App</h1>
+
+      <label for="celsiusToFahrenheit">
+        <span>Celsius To Fahrenheit</span>
+        <input
+          type="number"
+          id="celsiusToFahrenheit"
+          name="celsiusToFahrenheit"
+          placeholder="celsius"
+        />
+        <button onclick="celsiusToFahreinheit()" type="button">
+          Converse
+        </button>
+        <span id="showDeg"></span>
+      </label>
+
+      <label for="metersToInches">
+        <span>Meters To Inches</span>
+        <input
+          type="number"
+          id="metersToInches"
+          name="metersToInches"
+          placeholder="meters"
+        />
+        <button onclick="ToInches()" type="button">
+          Converse
+        </button>
+        <span id="showLeng"></span>
+      </label>
+      <p id="timeOfDay"></p>
+    </form>
+    <script>
+      let celsiusToFahreinheit = () => {
+        let celsius = document.getElementById("celsiusToFahrenheit").value;
+        let fahreinheit = celsius * 1.8 + 32;
+        //   document.getElementById("celsiusToFahrenheit").value = fahreinheit ;
+        document.getElementById("showDeg").innerHTML = `${fahreinheit} °F`;
+      };
+
+      let ToInches = () => {
+        let meters = document.getElementById("metersToInches").value;
+        let inches = Math.round(meters / 0.0254);
+        document.getElementById("showLeng").innerHTML = `${inches}″`;
+      };
+
+      let timeOfDay = () => {
+        let time = new Date().getHours();
+        if (time < 12) {
+          document.getElementById(
+            "timeOfDay"
+          ).innerHTML = `Good morning, it's ${time}am. `;
+        } else if (time > 12 && time <= 18) {
+          document.getElementById(
+            "timeOfDay"
+          ).innerHTML = `Good afternoon, it's ${time}pm.`;
+        } else {
+          document.getElementById(
+            "timeOfDay"
+          ).innerHTML = `Good evening, it's ${time}pm.`;
+        }
+      };
+      timeOfDay();
+    </script>
+  </body>
+</html>

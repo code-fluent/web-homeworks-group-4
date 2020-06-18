@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Celcius to Fahrenheit and Meters to Inches</title>
+
+    <script>
+      // ✅ Trainer notes:
+      // Perfect!
+      function convertToF(celsius) {
+        return (celsius * 9) / 5 + 32;
+      }
+
+      convertToF(30);
+
+      console.log(convertToF(30));
+      console.log(convertToF(21));
+      console.log(convertToF(84));
+      console.log(convertToF(55));
+
+      // ✅ Trainer notes:
+      // Perfect!
+      function convertMetersToInches(meters) {
+        if (meters < 0) {
+          return "input cannot be less than zero";
+        } else {
+          return meters / 0.025399986284;
+        }
+      }
+
+      // Sa aflu cum sa convertesc din metri in inch o fost mai challenging.
+      // A trebuit sa calculez si sa gandesc putin dar mi'a reusit in cele din urma xD. Sper ca e in regula.
+
+      console.log(convertMetersToInches(0));
+      console.log(convertMetersToInches(0.2));
+      console.log(convertMetersToInches(0.5));
+      console.log(convertMetersToInches(0.4));
+    </script>
+  </head>
+</html>

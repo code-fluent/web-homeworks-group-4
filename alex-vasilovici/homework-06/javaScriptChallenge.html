@@ -1,0 +1,59 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Challenge</title>
+  </head>
+  <body>
+    <script>
+      // ✅ Trainer notes:
+      // Perfect.
+
+      //First Challenge
+      let smallerThan = (number) => {
+        for (i = 0; i < number; i++) {
+          if (i % 3 === 0) {
+            console.log(i);
+          }
+        }
+      };
+      smallerThan(11);
+
+      // ✅ Trainer notes:
+      // ❗️For 8 and 12 this works well, but think about 25 and 15 for example.
+
+      //Second Challenge
+      let cmmdc = (a, b) => {
+        while (a !== b) {
+          if (a > b) {
+            a = a - b;
+          } else {
+            b = b - a;
+          }
+        }
+        console.log(`Greatest common advisor is ${a}`);
+      };
+      cmmdc(8, 12);
+
+      // ✅ Trainer notes:
+      // Great solution. One note: prefer true/false instead of 0/1 for booleans.
+
+      //Third Challenge
+      let ifPalindrom = (string) => {
+        let ok = 0;
+        let stringLength = string.length - 1;
+        for (i = 0; i <= stringLength / 2; i++) {
+          if (string[i] === string[stringLength - i]) {
+            ok = 1;
+          } else {
+            ok = 0;
+            break;
+          }
+        }
+        if (ok) console.log("This string is a palindrom");
+        else console.log("This string is not a palingrom");
+      };
+      ifPalindrom("abcdefgfedcba");
+    </script>
+  </body>
+</html>

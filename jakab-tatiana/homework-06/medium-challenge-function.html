@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Medium challenge</title>
+    <script>
+      // ✅ Trainer notes:
+      // Perfect!
+      var numbers = [6, 7, 8, 9];
+      var sum = 0;
+      for (var x = 0; x <= numbers.length - 1; x++) {
+        sum = sum + numbers[x];
+      }
+      console.log("Suma numerelor cuprinse intre 6 si 9 este:", sum);
+
+      // ✅ Trainer notes:
+      // Perfect!
+      function sumOfNumbersBetween(a, b) {
+        var c = 0;
+
+        for (var x = a; x <= b; x++) {
+          c = c + x;
+        }
+        return c;
+      }
+
+      var d = sumOfNumbersBetween(6, 9);
+      console.log("Suma numerelor cuprinse intre 6 si 9 este:", d);
+    </script>
+  </head>
+</html>

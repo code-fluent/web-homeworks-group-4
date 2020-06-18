@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Loops medium challange</title>
+    <script>
+      // ✅ Trainer notes
+      // This is a perfect solution, however it is a bit hard to follow.
+      // Can you solve it easier in less line?
+      var array = [6, 9];
+      var max = Math.max.apply(Math, array);
+      var min = Math.min.apply(Math, array);
+
+      function sumSeries(smallest, largest) {
+        var n = largest - smallest + 1;
+        var sum = (n * (smallest + largest)) / 2;
+
+        return sum;
+      }
+
+      var sum = sumSeries(min, max);
+      console.log(sum);
+    </script>
+  </head>
+</html>

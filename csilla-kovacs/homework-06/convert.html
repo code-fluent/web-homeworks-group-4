@@ -1,0 +1,64 @@
+<!-- 
+    ✅ Trainer notes:
+    Looks great. See comments below.
+ -->
+<html>
+    <head>
+<title>Convert</title>
+
+<style>
+
+    .container {
+            display: flex;
+            height: 75vh;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+</style>
+
+    </head>
+<body>
+<div class="container">
+    <div class="lenght">
+        <p><label>Inches</label>
+        <input class="inches" id="inputInches" type="number" oninput="LengthConverter(this.value)"
+            onchange="LengthConverter(this.value)"></p>
+
+        <p><label>Centimeter</label>
+        <output class="cm" id="outputcm"></p>
+    </div> 
+
+    <div>
+        <p><label>Fahrenheit</label>
+        <input id="f" type="number" onkeyup="convert('F')"> </p>
+
+        <p><lable>Celsius</lable>
+        <input id="c" type="number" onkeyup="convert('C')"> </p>
+    </div>
+
+    <script>
+        // ✅ Trainer notes:
+        // Prefer starting function names with lowercase like: lengthConverter
+        function LengthConverter(valNum) {
+            document.getElementById("outputcm").innerHTML = valNum / 0.39370;
+        }
+
+        function convert(degree) {
+            var x;
+            if (degree =="F") {
+               x = (document.getElementById("f").value - 32) * 5 / 9;
+                document.getElementById("c").value = Math.round(x);
+            }
+            else {
+                x = document.getElementById("c").value * 9 / 5 + 32;
+                document.getElementById("f").value = Math.round(x);
+            }
+        }
+    </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!-- 
+    ✅ Trainer notes:
+    Perfect.
+ -->
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <script>
+      function rockPaperScissors(choice, games) {
+        var gameOptions = ["Rock", "Paper", "Scissors"];
+        var computersChoice =
+          gameOptions[Math.floor(Math.random() * gameOptions.length)];
+
+        if (choice === computersChoice) {
+          alert(
+            "Computer's choice is also " +
+              computersChoice +
+              ". No-one won. It's even!"
+          );
+        } else if (choice === "Rock" && computersChoice === "Scissors") {
+          alert("Your choice 'Rock' wins over computer's choice 'Scissors'");
+        } else if (choice === "Rock" && computersChoice === "Paper") {
+          alert("Your choice 'Rock' looses to computer's choice 'Paper'");
+        } else if (choice === "Paper" && computersChoice === "Rock") {
+          alert("Your choice 'Paper' wins over computer's choice 'Rock'");
+        } else if (choice === "Paper" && computersChoice === "Scissors") {
+          alert("Your choice 'Paper' looses to  computer's choice 'Scissors'");
+        } else if (choice === "Scissors" && computersChoice === "Paper") {
+          alert("Your choice 'Scissors' wins over computer's choice 'Paper'");
+        } else if (choice === "Scissors" && computersChoice === "Rock") {
+          alert("Your choice 'Scissors' looses to computer's choice 'Rock'");
+        }
+
+        return;
+      }
+
+      var numberOfGames = prompt("How many games do you wish to play?");
+
+      for (var i = 1; i <= numberOfGames; i++) {
+        var usersChoice = prompt(
+          "Enter your choice between Rock, Paper and Scissors"
+        );
+        if (
+          usersChoice !== "Rock" &&
+          usersChoice !== "Paper" &&
+          usersChoice !== "Scissors"
+        ) {
+          alert("Please enter a valid choice");
+        } else {
+          rockPaperScissors(usersChoice, numberOfGames);
+        }
+      }
+    </script>
+  </head>
+</html>

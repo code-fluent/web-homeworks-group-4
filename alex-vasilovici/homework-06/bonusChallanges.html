@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bonus Challenges</title>
+  </head>
+
+  <body>
+    <script>
+      //Rolling a dice.
+      let rollDice = () => {
+        return Math.ceil(Math.random() * 6);
+      };
+      //arry to hold how many times each number on the dice is rolled
+      let countDiceNumber = [0, 0, 0, 0, 0, 0];
+      for (i = 1; i <= 100000; i++) {
+        //the number rolled will be the index of the array + 1
+        //and the count value will be the value at that index
+        countDiceNumber[rollDice() - 1] += 1;
+      }
+      for (j = 0; j < countDiceNumber.length; j++) {
+        console.log(`${j + 1} has been rolled ${countDiceNumber[j]} times`);
+      }
+
+      // ✅ Trainer notes:
+      // Very elegant solution. It is perfect.
+
+      //Rock paper scrissor
+      let rockPaperScissors = (string) => {
+        let gameArray = ["rock", "paper", "scissors"];
+        let randomChoise = Math.ceil(Math.random() * 3);
+
+        console.log(`The program choose: ${gameArray[randomChoise - 1]}`);
+        console.log(`You choose: ${string}`);
+        if (string === gameArray[randomChoise - 1]) {
+          return "No-one won. Even!";
+        }
+        if (string === "rock") {
+          if (gameArray[randomChoise - 1] === "scissors") {
+            return "You win!";
+          } else {
+            return "The program wins!";
+          }
+        }
+        if (string === "paper") {
+          if (gameArray[randomChoise - 1] === "rock") {
+            return "You win!";
+          } else {
+            return "The program wins!";
+          }
+        }
+        if (string === "scissors") {
+          if (gameArray[randomChoise - 1] === "paper") {
+            return "You win!";
+          } else {
+            return "The program wins!";
+          }
+        }
+      };
+      console.log(rockPaperScissors("rock"));
+
+      // ✅ Trainer notes:
+      // Perfect solution.
+
+      //Find the first N prime numbers
+      let isPrime = (value) => {
+        //number 1 is not a prime number
+        // https://blogs.scientificamerican.com/roots-of-unity/why-isnt-1-a-prime-number/
+        if (value <= 0 || value === 1) return false;
+
+        for (i = 2; i <= value / 2; i++) {
+          if (value % i === 0) {
+            return false;
+          }
+        }
+        return true;
+      };
+
+      let nPrimeNumbers = (number) => {
+        let count = 0,
+          isPrimeNumber = 0,
+          arrayOfPrime = [];
+        while (count < number) {
+          if (isPrime(isPrimeNumber)) {
+            // Of course this solution works just as good, I prefer the array tho.
+            //console.log(isPrimeNumber + ", ");
+            arrayOfPrime.push(isPrimeNumber);
+            count++;
+          }
+          isPrimeNumber++;
+        }
+        console.log(arrayOfPrime);
+      };
+      nPrimeNumbers(10);
+
+      // ✅ Trainer notes:
+      // Also perfect solution. Great link regards 1 not being a prime number.
+    </script>
+  </body>
+</html>

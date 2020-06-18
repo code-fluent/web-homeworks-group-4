@@ -1,0 +1,37 @@
+<!-- 
+    ✅ Trainer notes:
+    Very nice.
+ -->
+<html>
+  <head>
+    <title>Firts N Prime Numbers</title>
+    <script>
+      function isPrime(number) {
+        for (var i = 2; i < number; i++) {
+          if (number % i === 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      function primeNumbers(n) {
+        var prime = [];
+        var i = 1;
+        while (prime.length < n) {
+          if (isPrime(i) === true) {
+            prime.push(i);
+            i++;
+          } else {
+            i++;
+          }
+        }
+
+        alert("The first " + n + " prime numbers are: " + prime);
+        return prime;
+      }
+
+      primeNumbers(prompt("How many prime numbers do you want to be shown?"));
+    </script>
+  </head>
+</html>

@@ -1,0 +1,45 @@
+<!-- 
+    ✅ Trainer notes:
+    Perfect solution.
+ -->
+<html>
+  <head>
+    <title>Rolling a dice</title>
+    <script>
+      function dice() {
+        return Math.ceil(Math.random() * 6);
+      }
+
+      var countOne = 0;
+      var countTwo = 0;
+      var countThree = 0;
+      var countFour = 0;
+      var countFive = 0;
+      var countSix = 0;
+
+      for (var i = 0; i < 10; i++) {
+        var number = dice();
+        console.log("number=", number);
+        if (number === 1) {
+          countOne++;
+        } else if (number === 2) {
+          countTwo++;
+        } else if (number === 3) {
+          countThree++;
+        } else if (number === 4) {
+          countFour++;
+        } else if (number === 5) {
+          countFive++;
+        } else if (number === 6) {
+          countSix++;
+        }
+      }
+      console.log("You've rolled the number 1 ", countOne, " times");
+      console.log("You've rolled the number 2 ", countTwo, " times");
+      console.log("You've rolled the number 3 ", countThree, " times");
+      console.log("You've rolled the number 4 ", countFour, " times");
+      console.log("You've rolled the number 5 ", countFive, " times");
+      console.log("You've rolled the number 6 ", countSix, " times");
+    </script>
+  </head>
+</html>

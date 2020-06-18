@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <title>Convert to Inches</title>
+    <script>
+        // ✅ Trainer notes:
+        // This part looks good.
+        function convertToInches(meters) {
+
+            // ✅ Trainer notes:
+            // ❗You do not need the next line.
+            document.getElementById("inches");
+            var inches;
+            
+
+            inches = (meters * 39.370);
+            console.log(inches)
+            return inches;
+
+
+            
+
+
+
+        }
+
+        convertToInches(1);
+        convertToInches(5);
+        convertToInches(10);
+        convertToInches(100);
+
+        
+
+
+
+    </script>
+    <style>
+        .form {
+            display: flex;
+            margin: 200px auto 200px auto;
+            width: 1100px;
+            height: 100px;
+            border: 1px solid black;
+            padding: 6px;
+            background-color: floralwhite;
+            align-items: center;
+            text-align: center;
+
+
+        }
+
+        .heading {
+            margin-left: 20px;
+            font-size: 18px;
+            font-family: monospace;
+            font-weight: bold;
+            text-align: center;
+
+        }
+
+        .input {
+            font-size: 16px;
+            font-family: monospace;
+            font-weight: initial;
+            text-align: center;
+
+        }
+
+        .label {
+            margin-left: 150px;
+            font-size: 17px;
+            font-family: monospace;
+            font-weight: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        ✅ Trainer notes:
+        Great that you started to build the UI for this. You should continue.
+     -->
+    <form class="form">
+        <span>
+            <h1 class="heading">Meters - Inches convert</h1>
+        </span>
+        <span>
+            <label class="label">Meters:</label>
+            <input class="input" type="number" placeholder="meters" id="inches">
+        </span>
+        <span>
+            <label class="label">Inches:</label>
+            <input class="input" type="number" placeholder="inches" id="inches">
+        </span>
+    </form>
+
+
+</html>

@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge-JSv2</title>
+  </head>
+  <body>
+    <script>
+      // ✅ Trainer notes:
+      // Perfect. Great to see you already use arrow function.
+
+      //Basic Challenge
+      let numbers = () => {
+        let numArray = [];
+        let j = 0;
+        for (i = 3; i <= 100; i += 3) {
+          numArray[j++] = i;
+        }
+        console.log(numArray);
+      };
+
+      numbers();
+
+      // ✅ Trainer notes:
+      // Perfect.
+
+      //Medium challenge
+      let sum = (a, b) => {
+        let sumOfNumbers = 0;
+        for (i = a; i <= b; i++) {
+          sumOfNumbers += i;
+        }
+        console.log(sumOfNumbers);
+      };
+      sum(6, 9);
+    </script>
+  </body>
+</html>

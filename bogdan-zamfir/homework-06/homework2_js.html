@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Homework2_JS</title>
+  </head>
+  <script>
+    //Implement a for loop that writes to the console every third number between 0 and 100.
+    //It will write to the console: 3, 6, 9, 12, ..., 93, 96, 99.
+
+    // ✅ Trainer notes:
+    // Perfect.
+    document.write(" Tema easy: ");
+    for (var z = 3; z <= 98; z = z + 3) {
+      document.write(z + ", ");
+    }
+    document.write("99.");
+
+    //Implement a function that accepts two numbers as arguments: a and b and return the sum of numbers between a and b.
+    //For example if we call the function with a=6 and b=9 it will return 30 (which is 6+7+8+9).
+    document.write(" Tema medium: ");
+    var a = 6;
+    var b = 9;
+    var array = [a, b];
+    var length = b - a;
+
+    for (var i = 0; i <= length; i++) {
+      array[i] = a;
+      a++;
+    }
+    for (var i = 0, sum = 0; i < array.length; sum += array[i++])
+      console.log(array, " ");
+    document.write("Sum of array is: ", sum);
+
+    // ✅ Trainer notes:
+    // ❗️This can be solved much simpler like:
+    var a = 6;
+    var b = 9;
+    var sum = 0;
+
+    for (var i = a; i <= b; i++) {
+      sum = sum + i;
+    }
+  </script>
+</html>

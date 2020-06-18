@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 3 JS</title>
+  </head>
+  <body>
+    <script>
+      // ✅ Trainer notes:
+      // Perfect.
+
+      //array challenge
+      let sumOf = (numbers) => {
+        let sum = 0;
+        numbers.forEach((item) => {
+          if (item >= 0) {
+            sum += item;
+          }
+        });
+        return sum;
+      };
+      let numbers = [-2, 10, 2, 4, -6, 3];
+      console.log(sumOf(numbers));
+
+      // ✅ Trainer notes:
+      // Perfect.
+
+      //Object challenge
+      let animal = {
+        type: "dragon",
+        name: "Ryuu",
+        gut: ["sheep", "cows", "humans"],
+        eat: function (food) {
+          this.gut.push(food);
+        },
+      };
+      console.log(animal);
+      animal.eat("horses");
+      console.log(animal);
+
+      // ✅ Trainer notes:
+      // Perfect
+
+      //Medium Challenge
+      let firstNames = ["John", "Matthew", "Thomas", "Christian", "David"];
+      let lastNames = ["Smith", "Pitt", "Cruise", "Robinson"];
+
+      let randomName = () => {
+        return (
+          firstNames[Math.ceil(Math.random() * firstNames.length) - 1] +
+          " " +
+          lastNames[Math.ceil(Math.random() * lastNames.length) - 1]
+        );
+      };
+      console.log(randomName());
+    </script>
+  </body>
+</html>
